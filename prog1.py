@@ -36,7 +36,7 @@ def number_guessing_game():
             #残り2回のときに、1の位を提示する
             if attempt == max_attempts - 2:
                 ones_place = secret_number % 10
-                print(f"★最後のヒント: 正解の1の位は 「{ones_place}」 だ！")
+                print(f"★ヒント: 正解の1の位は 「{ones_place}」 だ！")
             #残り1回のときに、10の位を提示する
             elif attempt == max_attempts - 1:
                 tens_place = (secret_number // 10) % 10
