@@ -4,7 +4,7 @@ def number_guessing_game():
     #ランダムに正解の数字を決定（3桁：100〜999）
     secret_number = random.randint(100, 999)
     
-    #回答回数の制限（ここでは7回に設定）
+    #回答回数の制限
     max_attempts = 7
     
     print("【3桁の数当てゲーム】")
