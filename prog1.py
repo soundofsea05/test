@@ -32,6 +32,11 @@ def number_guessing_game():
                 print("ヒント: 正解はもっと大きな数字だ．\n")
             else:
                 print("ヒント: 正解はもっと小さな数字だ．\n")
+            
+            #次が最後の回答（残り1回）のときだけ、1の位を提示する
+            if attempt == max_attempts - 1:
+                ones_place = secret_number % 10
+                print(f"★最後のヒント: 正解の1の位は 「{ones_place}」 だ！")
                 
     #回数制限に達した場合の処理
     print("ゲームオーバーだ．制限回数を超えた．")
