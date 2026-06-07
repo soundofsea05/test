@@ -19,7 +19,19 @@ def number_guessing_game():
             print("無効な入力だ．3桁の数字（数字のみ）を入力しよう．\n")
             continue
             
+        guess = int(guess_input)
         
+        #正解・不正解のフィードバック
+        if guess == secret_number:
+            print(f"正解だ！ {attempt} 回目で {secret_number} を当てた！")
+            return  #正解したらプログラムを終了する
+        else:
+            print("不正解！")
+            #不正解時にヒントを出力
+            if guess < secret_number:
+                print("ヒント: 正解はもっと大きな数字だ．\n")
+            else:
+                print("ヒント: 正解はもっと小さな数字だ．\n")
                 
     #回数制限に達した場合の処理
     print("ゲームオーバーだ．制限回数を超えた．")
